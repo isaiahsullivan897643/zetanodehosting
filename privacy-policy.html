@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - ZetaNode Hosting</title>
+
+  <!-- Custom SVG Favicon: Zeta Hexagonal Node Emblem -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 92,28 92,72 50,95 8,72 8,28' fill='%23090D16' stroke='%2310B981' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='14' fill='%2310B981'/%3E%3Cpath d='M36 40 L64 40 L36 60 L64 60' stroke='%2334D399' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            zeta: {
+              obsidian: '#090D16',
+              surface: '#0F172A',
+              card: '#131E33',
+              cardBorder: '#1E2F4D',
+              emerald: '#10B981',
+              emeraldDark: '#059669',
+              mint: '#34D399',
+              mintGlow: 'rgba(16, 185, 129, 0.15)',
+              gold: '#FBBF24',
+              muted: '#94A3B8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #090D16;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .neon-glow {
+      box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.35);
+    }
+    .glass-card {
+      background: rgba(19, 30, 51, 0.7);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(52, 211, 153, 0.14);
+    }
+    .glass-card:hover {
+      border-color: rgba(52, 211, 153, 0.4);
+    }
+    .hero-radial {
+      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.18) 0%, rgba(9, 13, 22, 0.95) 70%);
+    }
+    .grid-lines {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-zeta-obsidian text-slate-100 antialiased selection:bg-zeta-emerald selection:text-white">
+
+  <!-- Floating Toast Notification -->
+  <div id="toast" class="fixed top-24 right-5 z-50 transform translate-x-full transition-transform duration-300 ease-in-out bg-zeta-surface text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-zeta-emerald/50">
+    <div class="w-7 h-7 rounded-full bg-zeta-emerald/20 flex items-center justify-center text-zeta-mint">
+      <i class="fa-solid fa-check text-xs"></i>
+    </div>
+    <span id="toast-message" class="text-xs sm:text-sm font-medium">Provision added to cart</span>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="bg-gradient-to-r from-zeta-surface via-emerald-950 to-zeta-surface text-zeta-mint text-[11px] sm:text-xs py-2 px-4 text-center tracking-wider font-medium border-b border-zeta-emerald/20 flex items-center justify-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-zeta-mint animate-pulse"></span>
+    <span>⚡ Flash Sale: Get .XYZ for only $0.89 USD & Cloud NVMe Hosting from $0.85/mo. Free 30-Day Guarantee.</span>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-zeta-obsidian/90 backdrop-blur-md border-b border-zeta-cardBorder/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-800 p-0.5 shadow-lg shadow-emerald-900/40 group-hover:scale-105 transition-transform">
+            <div class="w-full h-full bg-zeta-obsidian rounded-[10px] flex items-center justify-center">
+              <i class="fa-solid fa-network-wired text-zeta-mint text-lg"></i>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-white">Zeta<span class="text-zeta-emerald">Node</span></span>
+              <span class="text-[10px] uppercase font-bold tracking-widest bg-zeta-emerald/20 text-zeta-mint px-2 py-0.5 rounded-full border border-zeta-emerald/40">Cloud</span>
+            </div>
+            <span class="text-[10px] tracking-widest uppercase text-slate-400 block -mt-0.5">High-Velocity Infrastructure</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-300">
+          <a href="#domains" class="hover:text-zeta-mint transition-colors">Domains</a>
+          <a href="#hosting" class="hover:text-zeta-mint transition-colors">Hosting Plans</a>
+          <a href="#specs" class="hover:text-zeta-mint transition-colors">Speed Specs</a>
+          <a href="#comparison" class="hover:text-zeta-mint transition-colors">Comparison</a>
+          <a href="#reviews" class="hover:text-zeta-mint transition-colors">Reviews</a>
+          <a href="#faq" class="hover:text-zeta-mint transition-colors">FAQ</a>
+          <a href="#contact" class="hover:text-zeta-mint transition-colors">Contact Support</a>
+        </nav>
+
+        <!-- Right Quick Actions -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <!-- Currency Indicator -->
+          <div class="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-slate-300 bg-zeta-card px-3 py-1.5 rounded-full border border-zeta-cardBorder">
+            <span class="w-2 h-2 rounded-full bg-zeta-emerald animate-ping"></span>
+            <span>USD ($)</span>
+          </div>
+
+          <!-- Cart Button -->
+          <button id="cart-btn" class="relative p-2.5 rounded-xl bg-zeta-card hover:bg-slate-800 border border-zeta-cardBorder text-slate-200 transition-colors" aria-label="Shopping Cart">
+            <i class="fa-solid fa-server text-base text-zeta-mint"></i>
+            <span id="cart-badge" class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-zeta-emerald text-white text-[11px] font-bold rounded-full flex items-center justify-center scale-0 transition-transform">0</span>
+          </button>
+
+          <!-- Mobile Menu Trigger -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-zeta-card text-slate-200 border border-zeta-cardBorder" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-zeta-surface border-b border-zeta-cardBorder px-6 py-5 space-y-4">
+      <a href="#domains" class="block text-sm font-semibold tracking-wider uppercase text-slate-300 hover:text-zeta-mint mobile-link">Domains</a>
+      <a href="#hosting" class="block text-sm font-semibold tracking-wider uppercase text-slate-300 hover:text-zeta-mint mobile-link">Hosting Plans</a>
+      <a href="#specs" class="block text-sm font-semibold tracking-wider uppercase text-slate-300 hover:text-zeta-mint mobile-link">Speed Specs</a>
+      <a href="#comparison" class="block text-sm font-semibold tracking-wider uppercase text-slate-300 hover:text-zeta-mint mobile-link">Comparison</a>
+      <a href="#reviews" class="block text-sm font-semibold tracking-wider uppercase text-slate-300 hover:text-zeta-mint mobile-link">Reviews</a>
+      <a href="#faq" class="block text-sm font-semibold tracking-wider uppercase text-slate-300 hover:text-zeta-mint mobile-link">FAQ</a>
+      <a href="#contact" class="block text-sm font-semibold tracking-wider uppercase text-slate-300 hover:text-zeta-mint mobile-link">Contact Support</a>
+    </div>
+  </header>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div id="cart-drawer-overlay" class="fixed inset-0 bg-black/70 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-300">
+    <div id="cart-drawer" class="absolute top-0 right-0 h-full w-full max-w-md bg-zeta-surface border-l border-zeta-cardBorder shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="p-6 border-b border-zeta-cardBorder flex items-center justify-between bg-zeta-obsidian/70">
+        <div>
+          <h3 class="font-display text-xl font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-cart-shopping text-zeta-mint"></i> Provisioning Summary
+          </h3>
+          <p class="text-[11px] text-slate-400 tracking-wider uppercase">Active Services in Cart (USD)</p>
+        </div>
+        <button id="close-cart-btn" class="text-slate-400 hover:text-white p-2 text-xl">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-3">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="p-6 border-t border-zeta-cardBorder bg-zeta-obsidian/90">
+        <div class="flex justify-between items-center text-slate-400 text-xs mb-2">
+          <span>Provisioning Fee:</span>
+          <span class="text-zeta-mint font-semibold">FREE ($0.00)</span>
+        </div>
+        <div class="flex justify-between items-center mb-5">
+          <span class="font-display text-base font-bold text-slate-200">Total Billed:</span>
+          <span id="cart-total-price" class="font-display text-2xl font-bold text-zeta-mint">$0.00 USD</span>
+        </div>
+        <button onclick="simulateOrderCheckout()" class="w-full bg-gradient-to-r from-zeta-emerald to-emerald-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all shadow-lg shadow-emerald-900/30">
+          Deploy Infrastructure
+        </button>
+        <p class="text-[10px] text-center text-slate-400 mt-3 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-lock text-zeta-mint"></i> Automated Instant DNS & Root Activation
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+    <div class="mb-10 text-center">
+      <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brandGreen bg-emerald-950/60 border border-emerald-500/30 rounded-full">
+        Legal Transparency
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">Privacy Policy</h1>
+      <p class="text-slate-400 text-sm mt-3">Effective Date: October 2026 | Governing Jurisdiction: California, USA</p>
+    </div>
+
+    <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 sm:p-10 space-y-8 shadow-xl">
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-shield-halved text-brandGreen text-base"></i> 1. Scope & Commitment
+        </h2>
+        <p class="leading-relaxed text-sm sm:text-base text-slate-300">
+          ZetaNode Hosting ("we," "our," or "us") operates the website and provisioning infrastructure hosted at <strong>1420 Kettner Blvd, Suite 500, San Diego, CA 92101, USA</strong>. We respect your digital sovereignty and protect your personal identifying information across all domain registrations, web hosting services, and technical inquiries.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-database text-brandGreen text-base"></i> 2. Information We Collect
+        </h2>
+        <p class="leading-relaxed text-sm sm:text-base text-slate-300 mb-3">
+          To configure your server instances and process billing records in United States Dollars ($ USD), we collect:
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-sm sm:text-base text-slate-400">
+          <li><strong>Contact Details:</strong> First and last name, business name, physical billing address, and direct email address.</li>
+          <li><strong>Registry Information:</strong> WHOIS contact information required under ICANN registrar policies for top-level domain records (complimentary WHOIS privacy is masked where eligible).</li>
+          <li><strong>Technical Metadata:</strong> Originating IP address, browser user-agent, operating system details, and server request headers for anti-DDoS mitigation and abuse monitoring.</li>
+          <li><strong>Payment Identifiers:</strong> Tokenized payment logs handled via PCI-DSS certified gateway handlers. We never store raw credit card numbers.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-gear text-brandGreen text-base"></i> 3. How Your Information Is Utilized
+        </h2>
+        <p class="leading-relaxed text-sm sm:text-base text-slate-300">
+          Your data is used strictly to deploy LiteSpeed NVMe server containers, route DNS records, auto-install Let’s Encrypt SSL certificates, answer incoming technical support inquiries, and prevent fraud or illegal automated scripting. We do not sell, rent, or trade customer contact records to third-party ad brokers.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-lock text-brandGreen text-base"></i> 4. Infrastructure Security & Retention
+        </h2>
+        <p class="leading-relaxed text-sm sm:text-base text-slate-300">
+          Customer control layers and server metrics are protected with modern cryptographic hashing (TLS 1.3 / AES-256). Inactive server logs and automated backup snapshots are retained according to our compliance schedules, after which they are irreversibly scrubbed from our block storage clusters.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-user-check text-brandGreen text-base"></i> 5. Your Rights (CCPA / GDPR)
+        </h2>
+        <p class="leading-relaxed text-sm sm:text-base text-slate-300">
+          Pursuant to the California Consumer Privacy Act (CCPA) and international standards, you have the right to request access to the personal data we store, request an export of your information, or demand complete deletion of account records upon server termination.
+        </p>
+      </section>
+
+      <section class="border-t border-brandBorder pt-6">
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-brandGreen text-base"></i> 6. Privacy Inquiries
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">
+          For privacy audits, WHOIS privacy updates, or data erasure demands, contact our privacy compliance desk directly at:
+        </p>
+        <div class="mt-4 p-4 rounded-xl bg-slate-950/70 border border-brandBorder flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="text-white font-semibold">ZetaNode Privacy Desk</div>
+            <div class="text-sm text-slate-400">1420 Kettner Blvd, Suite 500, San Diego, CA 92101, USA</div>
+            <div class="text-sm text-brandGreen font-mono mt-1">zetanode.cloud@gmail.com</div>
+          </div>
+          <a href="mailto:zetanode.cloud@gmail.com" class="px-4 py-2 rounded-lg bg-emerald-500/10 text-brandGreen border border-emerald-500/30 text-sm font-medium hover:bg-emerald-500/20 text-center transition">
+            Send Inquiry
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-zeta-obsidian border-t border-zeta-cardBorder pt-16 pb-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-zeta-emerald flex items-center justify-center text-zeta-obsidian font-bold text-sm">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <span class="font-display text-xl font-bold text-white tracking-tight">Zeta<span class="text-zeta-emerald">Node</span> Hosting</span>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm mb-6">
+            Ultra-fast NVMe cloud hosting, automated SSL security, and budget domain registry services with zero overhead.
+          </p>
+          <div class="text-xs text-slate-400 space-y-2">
+            <p><i class="fa-solid fa-location-dot text-zeta-mint mr-2"></i> 1420 Kettner Blvd, Suite 500, San Diego, CA 92101, USA</p>
+            <p><i class="fa-solid fa-envelope text-zeta-mint mr-2"></i> zetanode.cloud@gmail.com</p>
+            <p><i class="fa-solid fa-shield-halved text-zeta-mint mr-2"></i> 99.99% Uptime SLA • Enterprise DDoS Protected</p>
+          </div>
+        </div>
+
+        <!-- Hosting Services -->
+        <div>
+          <h4 class="font-display text-white font-bold text-sm mb-4 tracking-wider uppercase">Hosting Tiers</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#hosting" class="hover:text-zeta-mint transition-colors">Nano Starter ($0.85/mo)</a></li>
+            <li><a href="#hosting" class="hover:text-zeta-mint transition-colors">Web Booster ($1.99/mo)</a></li>
+            <li><a href="#hosting" class="hover:text-zeta-mint transition-colors">Cloud Turbo ($4.49/mo)</a></li>
+            <li><a href="#hosting" class="hover:text-zeta-mint transition-colors">Dedicated Node ($18.90/mo)</a></li>
+            <li><a href="#comparison" class="hover:text-zeta-mint transition-colors">Plan Comparison Matrix</a></li>
+          </ul>
+        </div>
+
+        <!-- Domains & Registry -->
+        <div>
+          <h4 class="font-display text-white font-bold text-sm mb-4 tracking-wider uppercase">Domains (USD)</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#domains" class="hover:text-zeta-mint transition-colors">.COM Registration ($5.49/yr)</a></li>
+            <li><a href="#domains" class="hover:text-zeta-mint transition-colors">.XYZ Budget Domain ($0.89/yr)</a></li>
+            <li><a href="#domains" class="hover:text-zeta-mint transition-colors">.ORG Non-Profit ($6.99/yr)</a></li>
+            <li><a href="#domains" class="hover:text-zeta-mint transition-colors">.ONLINE Identity ($1.29/yr)</a></li>
+            <li><a href="#domains" class="hover:text-zeta-mint transition-colors">Free DNS Management</a></li>
+          </ul>
+        </div>
+
+        <!-- Separate Policy Links -->
+        <div>
+          <h4 class="font-display text-white font-bold text-sm mb-4 tracking-wider uppercase">Legal & Policies</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li>
+              <button onclick="openPolicyModal('privacy')" class="hover:text-zeta-mint transition-colors text-left flex items-center gap-1.5">
+                <i class="fa-solid fa-shield-cat text-zeta-mint text-[10px]"></i> Privacy Policy
+              </button>
+            </li>
+            <li>
+              <button onclick="openPolicyModal('refund')" class="hover:text-zeta-mint transition-colors text-left flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-rotate-left text-zeta-mint text-[10px]"></i> Refund Policy (30 Days)
+              </button>
+            </li>
+            <li>
+              <button onclick="openPolicyModal('terms')" class="hover:text-zeta-mint transition-colors text-left flex items-center gap-1.5">
+                <i class="fa-solid fa-file-shield text-zeta-mint text-[10px]"></i> Terms and Conditions
+              </button>
+            </li>
+            <li><a href="#contact" class="hover:text-zeta-mint transition-colors">Contact Support Desk</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Bottom Policy Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; <span id="current-year"></span> ZetaNode Hosting LLC. All rights reserved. </p>
+        <div class="flex gap-6 mt-4 sm:mt-0">
+        <a href="privacy-policy.html" class="hover:text-slate-300">Privacy Policy</a>
+        <a href="refund-policy.html" class="hover:text-slate-300">Refunds Policy</a>
+        <a href="terms-and-conditions.html" class="hover:text-slate-300">Terms and Conditions</a>
+      </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Separate Policy Modals -->
+  <div id="policy-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-zeta-surface rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden shadow-2xl border border-zeta-cardBorder">
+      <div class="p-6 border-b border-zeta-cardBorder flex items-center justify-between bg-zeta-obsidian">
+        <div>
+          <span class="text-[10px] tracking-widest uppercase text-zeta-mint font-semibold">Governance & Compliance</span>
+          <h3 id="policy-modal-title" class="font-display text-xl font-bold text-white">Legal Document</h3>
+        </div>
+        <button onclick="closePolicyModal()" class="w-8 h-8 rounded-full bg-zeta-card hover:bg-slate-800 text-slate-300 flex items-center justify-center">
+          <i class="fa-solid fa-xmark text-xs"></i>
+        </button>
+      </div>
+      <div id="policy-modal-body" class="p-6 sm:p-8 overflow-y-auto text-slate-300 text-xs sm:text-sm leading-relaxed space-y-4">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="p-4 border-t border-zeta-cardBorder bg-zeta-obsidian flex items-center justify-between">
+        <span class="text-[11px] text-slate-400">Jurisdiction: California, United States (USD)</span>
+        <button onclick="closePolicyModal()" class="px-5 py-2 bg-zeta-emerald hover:bg-zeta-emeraldDark text-white rounded-xl text-xs font-semibold uppercase tracking-wider transition">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Application Logic -->
+  <script>
+    // Cart Data Array
+    let cart = [];
+    let isYearlyBilling = true;
+
+    // Separate Policy Registry Content
+    const policyRegistry = {
+      privacy: {
+        title: "Privacy Policy",
+        content: `
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">1. Data Collection & Cloud Infrastructure</h4>
+          <p>ZetaNode Hosting LLC ("ZetaNode", "we", "our") takes privacy and technical confidentiality seriously. We gather registration identifiers including your name, email address (including Gmail tokens), contact coordinates, and IP logs strictly required for DNS routing and fraud prevention.</p>
+          
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mt-4">2. Zero Sale of Personal Data</h4>
+          <p>We do NOT sell, rent, or trade your personal email, website files, or database entries to third-party advertising brokers. Data is processed exclusively for the provision of hosting and ICANN domain registrations.</p>
+          
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mt-4">3. Security & Encryption Standards</h4>
+          <p>All server administration commands, SSH sessions, and billing transmissions are encrypted via modern TLS 1.3 encryption protocols. Data is hosted in Tier-IV USA datacenters compliant with strict ISO/IEC security benchmarks.</p>
+        `
+      },
+      refund: {
+        title: "Refund Policy (30-Day Money-Back Guarantee)",
+        content: `
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">Unconditional 30-Day Money-Back Terms</h4>
+          <p>We want you to build with complete confidence. If you are not thoroughly delighted with the performance, reliability, or speed of our cloud hosting plans (Nano Starter, Web Booster, Cloud Turbo, Dedicated Node), you may request a 100% full refund within 30 calendar days of initial deployment.</p>
+          
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mt-4">Domain Registration Exclusions</h4>
+          <p>In accordance with global ICANN regulatory registries, domain name registrations (.com, .xyz, .org, .online, .io) are registered instantly with central registries and are non-refundable once allocated. However, you maintain 100% full legal ownership of your domain and can freely transfer it to any registrar of your choice.</p>
+
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mt-4">Refund Processing (USD)</h4>
+          <p>All refunds are remitted in USD ($) back to your original payment card or digital gateway within 2 to 4 business days of ticket verification.</p>
+        `
+      },
+      terms: {
+        title: "Terms and Conditions",
+        content: `
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">1. Acceptance of Service Terms</h4>
+          <p>By purchasing, provisioning, or pointing DNS records to ZetaNode Hosting, you acknowledge compliance with these terms and applicable state laws of California, United States.</p>
+          
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mt-4">2. Acceptable Use Policy (AUP)</h4>
+          <p>Customers agree not to utilize our servers for unlawful distribution, spam bots, outbound denial-of-service attacks, or unlicensed malware hosting. Accounts found in violation are subject to immediate termination.</p>
+          
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mt-4">3. 99.99% Uptime Service Level Agreement (SLA)</h4>
+          <p>ZetaNode guarantees 99.99% network and power availability for our Gen-4 NVMe hardware cluster. In the event unscheduled network downtime exceeds the SLA in any billing cycle, service credits will be awarded to your account.</p>
+        `
+      }
+    };
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      setupCartDrawer();
+      setupContactForm();
+      setupMobileMenu();
+    });
+
+    // Toggle Annual vs Monthly Billing
+    function toggleBillingCycle() {
+      isYearlyBilling = !isYearlyBilling;
+      const indicator = document.getElementById('toggle-indicator');
+      const labelMonthly = document.getElementById('label-monthly');
+      const labelYearly = document.getElementById('label-yearly');
+
+      if (isYearlyBilling) {
+        indicator.classList.remove('translate-x-0');
+        indicator.classList.add('translate-x-7');
+        labelYearly.classList.replace('text-slate-400', 'text-zeta-mint');
+        labelMonthly.classList.replace('text-white', 'text-slate-400');
+      } else {
+        indicator.classList.remove('translate-x-7');
+        indicator.classList.add('translate-x-0');
+        labelMonthly.classList.replace('text-slate-400', 'text-white');
+        labelYearly.classList.replace('text-zeta-mint', 'text-slate-400');
+      }
+
+      // Update displayed plan prices
+      document.querySelectorAll('.plan-price').forEach(priceEl => {
+        const val = isYearlyBilling ? priceEl.dataset.yearly : priceEl.dataset.monthly;
+        priceEl.textContent = `$${val}`;
+      });
+
+      document.querySelectorAll('.plan-cycle-note').forEach(noteEl => {
+        noteEl.style.display = isYearlyBilling ? 'block' : 'none';
+      });
+    }
+
+    // Domain Quick Select Pills
+    function selectTld(tld) {
+      const input = document.getElementById('domain-checker-input');
+      input.value = `mycloudbrand.${tld}`;
+      checkDomainAvailability();
+      document.getElementById('domains').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Hero Search Handler
+    function handleDomainSearch(e) {
+      e.preventDefault();
+      const val = document.getElementById('hero-domain-input').value.trim();
+      if (!val) return;
+      document.getElementById('domain-checker-input').value = val;
+      checkDomainAvailability();
+      document.getElementById('domains').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Check Live Domain Availability Simulator
+    function checkDomainAvailability() {
+      const input = document.getElementById('domain-checker-input');
+      let query = input.value.trim().toLowerCase();
+      if (!query) {
+        query = 'myprojectnode.com';
+      }
+
+      // Clean query
+      let base = query.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+      if (!base.includes('.')) {
+        base += '.com';
+      }
+
+      const parts = base.split('.');
+      const name = parts[0];
+      const tld = parts.slice(1).join('.');
+
+      const resultsArea = document.getElementById('domain-results-area');
+      const primaryResult = document.getElementById('primary-domain-result');
+      const primaryPrice = document.getElementById('primary-domain-price');
+      const primaryBtn = document.getElementById('primary-domain-btn');
+      const altGrid = document.getElementById('alternative-domains-grid');
+
+      // TLD price map in USD
+      const priceMap = {
+        'com': 5.49,
+        'xyz': 0.89,
+        'org': 6.99,
+        'online': 1.29,
+        'io': 24.99,
+        'net': 6.99
+      };
+
+      const selectedPrice = priceMap[tld] || 8.99;
+      primaryResult.textContent = `${name}.${tld}`;
+      primaryPrice.textContent = `$${selectedPrice.toFixed(2)}`;
+
+      primaryBtn.onclick = function() {
+        addDomainToCart(`${name}.${tld}`, selectedPrice);
+      };
+
+      // Alternative Extensions
+      const extensions = ['xyz', 'online', 'org'].filter(ext => ext !== tld);
+      altGrid.innerHTML = extensions.map(ext => {
+        const altPrice = priceMap[ext] || 4.99;
+        return `
+          <div class="p-3 bg-zeta-card rounded-xl border border-zeta-cardBorder flex items-center justify-between">
+            <div>
+              <p class="font-bold text-white text-xs">${name}.${ext}</p>
+              <p class="text-zeta-mint text-[11px] font-semibold">$${altPrice.toFixed(2)} USD</p>
+            </div>
+            <button onclick="addDomainToCart('${name}.${ext}', ${altPrice})" class="px-3 py-1.5 bg-zeta-surface hover:bg-zeta-emerald text-white text-[11px] font-bold rounded-lg transition border border-zeta-cardBorder">
+              + Add
+            </button>
+          </div>
+        `;
+      }).join('');
+
+      resultsArea.classList.remove('hidden');
+      resultsArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Add Domain to Cart
+    function addDomainToCart(domainName, price) {
+      cart.push({
+        id: 'dom-' + Date.now(),
+        type: 'Domain Registration',
+        name: domainName,
+        price: price,
+        cycle: '1 Year (USD)'
+      });
+      updateCartUI();
+      showToast(`Domain ${domainName} added to cart`);
+    }
+
+    // Add Hosting Plan to Cart
+    function addHostingToCart(planName, yearlyPrice, monthlyPrice) {
+      const price = isYearlyBilling ? yearlyPrice * 12 : monthlyPrice;
+      const cycle = isYearlyBilling ? 'Yearly Billed (USD)' : '1 Month (USD)';
+
+      cart.push({
+        id: 'host-' + Date.now(),
+        type: 'Cloud Hosting',
+        name: planName,
+        price: parseFloat(price.toFixed(2)),
+        cycle: cycle
+      });
+      updateCartUI();
+      showToast(`${planName} hosting added to cart`);
+      openCartDrawer();
+    }
+
+    // Remove Item from Cart
+    function removeCartItem(id) {
+      cart = cart.filter(item => item.id !== id);
+      updateCartUI();
+    }
+
+    // Update Cart UI
+    function updateCartUI() {
+      const badge = document.getElementById('cart-badge');
+      badge.textContent = cart.length;
+
+      if (cart.length > 0) {
+        badge.classList.remove('scale-0');
+        badge.classList.add('scale-100');
+      } else {
+        badge.classList.remove('scale-100');
+        badge.classList.add('scale-0');
+      }
+
+      const container = document.getElementById('cart-items-container');
+      const totalEl = document.getElementById('cart-total-price');
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-16">
+            <i class="fa-solid fa-server text-4xl text-slate-600 mb-3 block"></i>
+            <p class="text-slate-400 text-xs sm:text-sm">No domains or hosting nodes in cart.</p>
+            <a href="#domains" onclick="closeCartDrawer()" class="inline-block mt-3 text-xs font-bold text-zeta-mint uppercase tracking-wider underline">Browse Domains ($0.89)</a>
+          </div>
+        `;
+        totalEl.textContent = '$0.00 USD';
+        return;
+      }
+
+      let sum = 0;
+      container.innerHTML = cart.map(item => {
+        sum += item.price;
+        return `
+          <div class="p-3.5 bg-zeta-card rounded-xl border border-zeta-cardBorder flex items-center justify-between">
+            <div class="min-w-0 flex-1 pr-3">
+              <span class="text-[9px] uppercase tracking-wider text-zeta-mint font-bold block">${item.type}</span>
+              <h4 class="font-display text-xs font-bold text-white truncate">${item.name}</h4>
+              <span class="text-[10px] text-slate-400">${item.cycle}</span>
+            </div>
+            <div class="text-right">
+              <span class="font-display font-bold text-sm text-white block">$${item.price.toFixed(2)}</span>
+              <button onclick="removeCartItem('${item.id}')" class="text-[11px] text-rose-400 hover:text-rose-300 mt-1">
+                <i class="fa-solid fa-trash-can mr-1"></i>Remove
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      totalEl.textContent = `$${sum.toFixed(2)} USD`;
+    }
+
+    // Cart Drawer Controls
+    function setupCartDrawer() {
+      const cartBtn = document.getElementById('cart-btn');
+      const closeBtn = document.getElementById('close-cart-btn');
+      const overlay = document.getElementById('cart-drawer-overlay');
+      const drawer = document.getElementById('cart-drawer');
+
+      window.openCartDrawer = function() {
+        overlay.classList.remove('hidden');
+        setTimeout(() => {
+          overlay.classList.remove('opacity-0');
+          drawer.classList.remove('translate-x-full');
+        }, 10);
+      };
+
+      window.closeCartDrawer = function() {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0');
+        setTimeout(() => {
+          overlay.classList.add('hidden');
+        }, 300);
+      };
+
+      cartBtn.addEventListener('click', openCartDrawer);
+      closeBtn.addEventListener('click', closeCartDrawer);
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeCartDrawer();
+      });
+    }
+
+    // Checkout Simulation
+    function simulateOrderCheckout() {
+      if (cart.length === 0) {
+        showToast("Your cart is empty. Please select a domain or hosting plan.");
+        return;
+      }
+      showToast("Redirecting to 256-Bit SSL payment processor in USD...");
+      setTimeout(() => {
+        cart = [];
+        updateCartUI();
+        closeCartDrawer();
+        showToast("Order initiated! Check your inbox for node deployment confirmation.");
+      }, 1400);
+    }
+
+    // Separate Policy Modals
+    function openPolicyModal(type) {
+      const policy = policyRegistry[type];
+      if (!policy) return;
+
+      document.getElementById('policy-modal-title').textContent = policy.title;
+      document.getElementById('policy-modal-body').innerHTML = policy.content;
+      document.getElementById('policy-modal').classList.remove('hidden');
+    }
+
+    function closePolicyModal() {
+      document.getElementById('policy-modal').classList.add('hidden');
+    }
+
+    // FAQ Accordion
+    function toggleFaq(id) {
+      const ans = document.getElementById(`faq-ans-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      } else {
+        ans.classList.add('hidden');
+        icon.classList.remove('fa-minus');
+        icon.classList.add('fa-plus');
+      }
+    }
+
+    // Contact Form Logic With Exact Confirmation Text
+    function setupContactForm() {
+      const form = document.getElementById('contact-form');
+      const banner = document.getElementById('contact-success-banner');
+      const submitBtn = document.getElementById('contact-submit-btn');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting Ticket...';
+
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+
+          // User requested exact message
+          banner.classList.remove('hidden');
+          form.reset();
+          banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 500);
+      });
+    }
+
+    // Mobile Menu Toggle
+    function setupMobileMenu() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const links = document.querySelectorAll('.mobile-link');
+
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Toast Utility
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = msg;
+
+      toast.classList.remove('translate-x-full');
+      setTimeout(() => {
+        toast.classList.add('translate-x-full');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
